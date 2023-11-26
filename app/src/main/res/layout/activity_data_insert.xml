@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataInsertActivity">
+
+    <Toolbar
+        android:background="#FFC107"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/title_tool"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:text="My Note App"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </Toolbar>
+
+    <EditText
+
+        android:id="@+id/title"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/float_bg"
+        android:ems="10"
+        android:hint="Enter the title"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/disp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/disp"
+        android:layout_width="390dp"
+        android:layout_height="350dp"
+        android:background="@drawable/float_bg"
+        android:ems="10"
+        android:hint="Enter the note"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:textSize="22sp"
+        android:id="@+id/add"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/disp"
+        app:layout_constraintStart_toStartOf="@+id/disp"
+        app:layout_constraintTop_toBottomOf="@+id/disp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
